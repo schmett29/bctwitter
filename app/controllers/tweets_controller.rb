@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
 
 	def new
-		@state = "massachusettes"
+		@tweet = Tweet.new
 	end
 end
