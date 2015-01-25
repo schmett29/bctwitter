@@ -6,3 +6,8 @@
   <%= f.input :content %>
   <%= f.button :submit %>
 <% end %>
+<ul>
+	<% @tweets.each do |tweet| %>
+		<li><%= tweet.content %></li>
+	<% end %>
+</ul>
