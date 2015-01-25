@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
    has_many :tweets
+
+   has_one :profile
+   
 end
