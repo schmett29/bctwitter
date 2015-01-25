@@ -15,9 +15,13 @@ class TweetsController < ApplicationController
 		@tweets = current_user.tweets
 
 		if @tweet.save
-			flash.now[:success] = "Tweet Created"
+			flash[:success] = "Tweet Created"
+			redirect_to new_tweet_path
+		else
+			flash.now[:danger] = "did not work"
+			render 'new'
 		end
-		render 'new'
+		
 	end
 
 	def index
